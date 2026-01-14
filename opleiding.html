@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Meta and title -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Opleiding — Noureddin Bakali</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="opleiding.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header with navigation and branding -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand/logo section -->
+      <a class="brand" href="index.html" aria-label="Ga naar home">
+        <img src="foto2.jpeg" alt="Profielfoto Noureddin Bakali" class="brand-photo">
+        <div class="brand-text">
+          <h1 style="margin:0;">Noureddin Bakali</h1>
+          <p style="margin:2px 0 0; color:var(--muted);">Software Developer • Amsterdam</p>
+        </div>
+      </a>
+
+      <!-- Main navigation menu -->
+      <nav class="nav" id="navMenu" aria-label="Navigatie">
+        <a href="index.html">Home</a>
+        <a href="ervaring.html">Ervaring</a>
+        <a class="is-active" href="opleiding.html" aria-current="page">Opleiding</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+
+      <!-- Header action buttons (theme and mobile menu) -->
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" type="button" aria-label="Wissel thema" title="Wissel thema">🌓</button>
+        <button id="menuToggle" class="btn-icon mobile-menu-btn" type="button" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">Opleiding</h3>
+
+        <!-- Education grid -->
+        <div class="grid-2">
+          <!-- Talland College card -->
+          <div class="card">
+            <h4>Talland College</h4>
+            <span class="role-subtitle">Software Developer (niveau 4), Talland College, Zaandam</span>
+            <span class="role-date">sept 2025 – heden</span>
+            <ul style="margin-top: 0.5rem;">
+              <li>Werkte projectmatig aan software en webcomponenten volgens Scrum (user stories, sprints, demo’s).</li>
+              <li>Paste objectgeoriënteerd programmeren toe met basis SQL/datamodellering en versiebeheer (Git).</li>
+              <li>Bouwde kleine applicaties en responsive pagina’s met Java, PHP, HTML en CSS.</li>
+              <li>Legde nadruk op testen, documentatie en duidelijke code (clean code, code reviews).</li>
+            </ul>
+          </div>
+          <!-- ROC Zuid Oost card -->
+          <div class="card">
+            <h4>ROC Zuid Oost</h4>
+            <span class="role-subtitle">Software Developer</span>
+            <span class="role-date">feb 2023 – feb 2025</span>
+            <ul style="margin-top: 0.5rem;">
+              <li>Geleerd te werken met PHP en JavaScript.</li>
+              <li>Kennisgemaakt met het framework Laravel.</li>
+              <li>Ervaring opgedaan met C# en Unity game development.</li>
+              <li>Geprogrammeerd met HTML, CSS en objectgeoriënteerd programmeren (OOP).</li>
+            </ul>
+          </div>
+          <!-- ROC Nova College card -->
+          <div class="card">
+            <h4>ROC Nova College</h4>
+            <span class="role-subtitle">ICT Medewerker Support (niveau 2), ROC Nova College, Hoofddorp</span>
+            <span class="role-date">2021 – 2023</span>
+            <ul style="margin-top: 0.5rem;">
+              <li>Basis support & dienstverlening: incidenten registreren, prioriteren en oplossen.</li>
+              <li>Onderwerpen: hardware/software, Windows, netwerkbasis en klantcommunicatie.</li>
+            </ul>
+          </div>
+          <!-- Mundus College card -->
+          <div class="card">
+            <h4>Mundus College</h4>
+            <span class="role-subtitle">VMBO</span>
+            <span class="role-date">2019 – 2021</span>
+          </div>
+          <!-- Viertaal College card -->
+          <div class="card">
+            <h4>Viertaal College</h4>
+            <span class="role-subtitle">Voortgezet onderwijs</span>
+            <span class="role-date">2016 – 2021</span>
+          </div>
+        </div>
+        <!-- End education grid -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with copyright -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="margin:0;">&copy; <span id="year"></span> Noureddin “Nordin” Bakali</p>
+    </div>
+  </footer>
+
+  <!-- Main scripts -->
+  <script src="main.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script>
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.getElementById('menuToggle');
+      var navMenu = document.getElementById('navMenu');
+      if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

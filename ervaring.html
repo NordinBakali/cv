@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="nl" data-theme="dark">
+<head>
+  <!-- Meta and title -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ervaring — Noureddin Bakali</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="ervaring.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header with navigation and branding -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand/logo section -->
+      <a class="brand" href="index.html" aria-label="Ga naar home">
+        <img src="foto2.jpeg" alt="Profielfoto Noureddin Bakali" class="brand-photo">
+        <div class="brand-text">
+          <h1 style="margin:0;">Noureddin Bakali</h1>
+          <p style="margin:2px 0 0; color:var(--muted);">Software Developer • Amsterdam</p>
+        </div>
+      </a>
+
+      <!-- Main navigation menu -->
+      <nav class="nav" id="navMenu" aria-label="Navigatie">
+        <a href="index.html">Home</a>
+        <a class="is-active" href="ervaring.html" aria-current="page">Ervaring</a>
+        <a href="opleiding.html">Opleiding</a>
+        <a href="skills.html">Skills</a>
+      </nav>
+
+      <!-- Header action buttons (theme and mobile menu) -->
+      <div class="header-actions">
+        <button id="themeToggle" class="btn-icon" type="button" aria-label="Wissel thema" title="Wissel thema">🌓</button>
+        <button id="menuToggle" class="btn-icon mobile-menu-btn" type="button" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main class="main-content">
+    <section class="section">
+      <div class="container">
+        <h3 class="section-title">Werkervaring</h3>
+
+        <!-- Timeline of work experience -->
+        <div class="timeline">
+          <!-- Timeline item: Gamma Amsterdam -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="card">
+              <h4>Gamma Amsterdam</h4>
+              <span class="role-date">nov 2025 – heden</span>
+              <span class="role-subtitle">Zager / Sales</span>
+              <ul>
+                <li>Zaagt hout- en plaatmateriaal op maat op basis van opdrachtbonnen, met focus op nauwkeurigheid en veiligheid.</li>
+                <li>Adviseerdt klanten over materialen, bevestigingsmiddelen en gereedschap.</li>
+                <li>Onderhoud zaagmachines en de werkplek; voerde maat- en kwaliteitscontroles uit.</li>
+                <li>Ondersteunt verkoop, balie en kassa tijdens drukte en hielp bij eenvoudig voorraadbeheer.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Timeline item: MediaMarkt -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="card">
+              <h4>MediaMarkt</h4>
+              <span class="role-date">nov 2023 – jun 2025</span>
+              <span class="role-subtitle">Sales • Reparaties • Kassa</span>
+              <ul>
+                <li>Klanten adviseren over elektronica en ICT-producten.</li>
+                <li>Kleine reparaties en onderhoud uitvoeren.</li>
+                <li>Kassawerk en betalingen afhandelen.</li>
+                <li>Technische vragen oplossen voor klanten.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Timeline item: Albert Heijn -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="card">
+              <h4>Albert Heijn</h4>
+              <span class="role-date">jun 2020 – 2022</span>
+              <span class="role-subtitle">Vakkenvuller, Albert Heijn Amsterdam</span>
+              <ul>
+                <li>Vulde en spiegelde schappen en hield de winkelpresentatie op orde.</li>
+                <li>Hielp klanten proactief met vragen en wees producten/alternatieven aan.</li>
+                <li>Ondersteunde bij voorraad- en kwaliteitscontroles (THT, beschadigingen, netheid).</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Timeline item: Vomar -->
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="card">
+              <h4>Vomar</h4>
+              <span class="role-date">dec 2019 – jan 2020</span>
+              <span class="role-subtitle">Vakkenvuller, Vomar Amsterdam</span>
+              <ul>
+                <li>Vulde schappen en zorgde voor een nette en veilige winkelvloer.</li>
+                <li>Ondersteunde collega’s bij piekmomenten en eenvoudige klantvragen.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End timeline -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer with copyright -->
+  <footer class="site-footer">
+    <div class="container">
+      <p style="margin:0;">&copy; <span id="year"></span> Noureddin “Nordin” Bakali</p>
+    </div>
+  </footer>
+
+  <!-- Main scripts -->
+  <script src="main.js" defer></script>
+  <script src="theme.js" defer></script>
+  <script>
+    // Mobile menu functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      var menuToggle = document.getElementById('menuToggle');
+      var navMenu = document.getElementById('navMenu');
+      if(menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('open');
+        });
+        navMenu.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            navMenu.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
